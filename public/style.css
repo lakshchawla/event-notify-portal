@@ -1,0 +1,161 @@
+/* Google Font Import - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #2a2b3d;
+  --Sidebar-color: #6f6486;
+  --primary-color: #2a2b3d;
+  --primary-color-light: #313348;
+  --toggle-color: rgb(255, 255, 255);
+  --text-color: #ffffff;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+
+.Body {
+  min-height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+
+/* ===== Sidebar ===== */
+.Sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 88px;
+  padding: 10px 14px;
+  background: var(--Sidebar-color);
+  transition: var(--tran-05);
+  z-index: 100;
+}
+
+/* ===== Reusable code - Here ===== */
+.Sidebar li {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.Sidebar header .image,
+.Sidebar .icon {
+  min-width: 60px;
+  border-radius: 6px;
+}
+
+.Sidebar .icon {
+  min-width: 60px;
+  border-radius: 6px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.Sidebar .icon {
+  color: var(--text-color);
+  transition: var(--tran-03);
+}
+
+/* =========================== */
+
+.Sidebar header {
+  position: relative;
+}
+
+.Sidebar header .image img {
+  width: 40px;
+  border-radius: 6px;
+}
+
+.Sidebar .Menu {
+  margin-top: 40px;
+}
+
+
+
+.Sidebar li a {
+  list-style: none;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--tran-03);
+}
+
+.Sidebar li a:hover {
+  background-color: #55566d;
+  color: white;
+}
+
+.Sidebar li a:hover .icon {
+  color: white;
+}
+
+.Sidebar li a:hover .Nav-text {
+  display: initial;
+  transition: var(--tran-03);
+}
+
+.Sidebar .MenuBar {
+  height: calc(100% - 55px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+
+.MenuBar .Bottom-Content .toggle-switch {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.Nav-text {
+  position: absolute;
+  left: 60px;
+  background-color: #55566d;
+  display: none;
+  padding: 10px 14px;
+  color: white;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+.Dashboard .Menu{
+    width: calc(100vw - 88px);
+    margin-left: auto;
+    padding: 20px;
+}
+
